@@ -143,6 +143,75 @@ if [[ "$__BuildArch" == "armel" ]]; then
     __PortableBuild=0
 fi
 
+# Configure environment if we are doing a cross compile.
+if [ "$__CrossBuild" == true ]; then
+    __CrossBuild=true
+    export CROSSCOMPILE=1
+    if [ "${__BuildOS}" != "OSX" ]; then
+        if ! [[ -n "$ROOTFS_DIR" ]]; then
+            echo "ERROR: ROOTFS_DIR not set for cross build"
+            exit 1
+        fi
+        echo "ROOTFS_DIR: $ROOTFS_DIR"
+    fi
+fi
+
+mkdir -p "$__IntermediatesDir"
+mkdir -p "$__LogDir"
+mkdir -p "$__CMakeBinDir"
+
+build_native()
+{
+    platformArch="$1"
+    intermediatesForBuild="$2"
+    extraCmakeArguments="$3"
+
+    # All set to commence the build
+    echo "Commencing $__DistroRid build for $__BuildOS.$__BuildArch.$__BuildType in $intermediatesForBuild"
+
+    generator=""
+    buildFile="Makefile"
+    buildTool="make"
+    scriptDir="$__ProjectRoot/eng"
+
+    pushd "$intermediatesForBuild"
+    echo "Invoking \"$scriptDir/gen-buildsys-clang.sh\" \"$__ProjectRoot\" $__ClangMajorVersion \"$__ClangMinorVersion\" $platformArch "$scriptDir" $__BuildType $generator $extraCmakeArguments"
+    "$scriptDir/gen-buildsys-clang.sh" "$__ProjectRoot" $__ClangMajorVersion "$__ClangMinorVersion" $platformArch "$scriptDir" $__BuildType $generator "$extraCmakeArguments"
+    popd
+
+    if [ ! -f "$intermediatesForBuild/$buildFile" ]; then
+        echo "Failed to generate build project!"
+        exit 1
+    fi
+
+    # Check that the makefiles were created.
+    pushd "$intermediatesForBuild"
+
+    echo "Executing $buildTool install -j $__NumProc"
+
+    $buildTool install -j $__NumProc | tee $__LogDir/make.log
+    if [ $? != 0 ]; then
+        echo "Failed to build."
+        exit 1
+    fi
+
+    popd
+}
+
+initTargetDistroRid()
+{
+    source "$__ProjectRoot/eng/init-distro-rid.sh"
+
+    local passedRootfsDir=""
+
+    # Only pass ROOTFS_DIR if cross is specified and the current platform is not OSX that doesn't use rootfs
+    if [ $__CrossBuild == true  -a "$__HostOS" != "OSX" ]; then
+        passedRootfsDir=${ROOTFS_DIR}
+    fi
+
+    initDistroRidGlobal ${__BuildOS} ${__BuildArch} ${__PortableBuild} ${passedRootfsDir}
+}
+
 #
 # Managed build
 #
