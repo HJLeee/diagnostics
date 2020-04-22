@@ -11,6 +11,7 @@ using SOS;
 using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -330,9 +331,20 @@ namespace Microsoft.Diagnostics.DebugServices.Implementation
             Microsoft.SymbolStore.SymbolStores.SymbolStore store = _symbolStore;
             symbolDirectoryPath = Path.GetFullPath(symbolDirectoryPath);
 
-            if (!IsDuplicateSymbolStore<DirectorySymbolStore>(store, (directorySymbolStore) => IsPathEqual(symbolDirectoryPath, directorySymbolStore.Directory)))
+            var probingPaths = new List<string> { symbolDirectoryPath };
+            if (Directory.Exists(symbolDirectoryPath))
             {
-                SetSymbolStore(new DirectorySymbolStore(Tracer.Instance, store, symbolDirectoryPath));
+                // Add all subdirectories.
+                probingPaths.AddRange(Directory.GetDirectories(symbolDirectoryPath, "*", SearchOption.AllDirectories));
+            }
+            // Make sure the root directory is enumerated last so that it comes first in the fallback tree.
+            foreach (var path in Enumerable.Reverse(probingPaths))
+            {
+                if (!IsDuplicateSymbolStore<DirectorySymbolStore>(store, (directorySymbolStore) => IsPathEqual(path, directorySymbolStore.Directory)))
+                {
+                    SetSymbolStore(new DirectorySymbolStore(Tracer.Instance, store, symbolDirectoryPath));
+                    store = _symbolStore;
+                }
             }
         }
 
