@@ -185,6 +185,7 @@ cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/SOS.Extensions.dll %{buildroot}%{
 cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/SOS.Hosting.dll %{buildroot}%{netcoreappdir}
 cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/SOS.InstallHelper.dll %{buildroot}%{netcoreappdir}
 cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/System.CommandLine.dll %{buildroot}%{netcoreappdir}
+cp -f %{_artifacts}/dotnet-sos/%{_buildtype}/netcoreapp*/publish/*/sosdocsunix.txt %{buildroot}%{netcoreappdir}
 
 # Tools
 mkdir -p %{buildroot}%{toolsdir}/%{rid}
@@ -192,6 +193,7 @@ cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/*.so %{buildroot}%{toolsdir}/%{ri
 for name in counters dump gcdump trace; do
   cp -f %{_artifacts}/dotnet-${name}/%{_buildtype}/netcoreapp*/publish/*.dll %{buildroot}%{toolsdir}
 done
+cp -f %{_artifacts}/dotnet-dump/%{_buildtype}/netcoreapp*/publish/*/sosdocsunix.txt %{buildroot}%{toolsdir}
 
 %files
 %manifest %{name}.manifest
