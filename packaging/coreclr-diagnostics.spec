@@ -190,7 +190,7 @@ cp -f %{_artifacts}/dotnet-sos/%{_buildtype}/netcoreapp*/publish/*/sosdocsunix.t
 # Tools
 mkdir -p %{buildroot}%{toolsdir}/%{rid}
 cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/*.so %{buildroot}%{toolsdir}/%{rid}
-for name in counters dump gcdump trace; do
+for name in counters dump gcdump stack trace; do
   cp -f %{_artifacts}/dotnet-${name}/%{_buildtype}/netcoreapp*/publish/*.dll %{buildroot}%{toolsdir}
 done
 cp -f %{_artifacts}/dotnet-dump/%{_buildtype}/netcoreapp*/publish/*/sosdocsunix.txt %{buildroot}%{toolsdir}

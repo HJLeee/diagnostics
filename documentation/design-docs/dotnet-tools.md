@@ -461,7 +461,6 @@ COMMANDS
 REPORT
 
     dotnet-stack report -p|--process-id <pid>
-                        -n|--name <process-name>
                         [-h|--help]
 
     Prints the managed stack from every thread in the target process

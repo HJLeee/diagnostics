@@ -24,7 +24,7 @@ namespace Microsoft.Diagnostics.Tools.Stack
 {
     internal static class ReportCommandHandler
     {
-        delegate Task<int> ReportDelegate(CancellationToken ct, IConsole console, int processId, string name, TimeSpan duration);
+        delegate Task<int> ReportDelegate(CancellationToken ct, IConsole console, int processId, TimeSpan duration);
 
         /// <summary>
         /// Reports a stack trace
@@ -32,32 +32,16 @@ namespace Microsoft.Diagnostics.Tools.Stack
         /// <param name="ct">The cancellation token</param>
         /// <param name="console"></param>
         /// <param name="processId">The process to report the stack from.</param>
-        /// <param name="name">The name of process to report the stack from.</param>
         /// <param name="output">The output path for the collected trace data.</param>
         /// <param name="duration">The duration of to trace the target for. </param>
         /// <returns></returns>
-        private static async Task<int> Report(CancellationToken ct, IConsole console, int processId, string name, TimeSpan duration)
+        private static async Task<int> Report(CancellationToken ct, IConsole console, int processId, TimeSpan duration)
         {
             string tempNetTraceFilename = Path.Join(Path.GetTempPath(), Path.GetRandomFileName() + ".nettrace");
             string tempEtlxFilename = "";
 
             try
             {
-                // Either processName or processId has to be specified.
-                if (!string.IsNullOrEmpty(name))
-                {
-                    if (processId != 0)
-                    {
-                        Console.WriteLine("Can only specify either --name or --process-id option.");
-                        return -1;
-                    }
-                    processId = CommandUtils.FindProcessIdWithName(name);
-                    if (processId < 0)
-                    {
-                        return -1;
-                    }
-                }
-
                 if (processId < 0)
                 {
                     console.Error.WriteLine("Process ID should not be negative.");
@@ -183,7 +167,6 @@ namespace Microsoft.Diagnostics.Tools.Stack
                 HandlerDescriptor.FromDelegate((ReportDelegate)Report).GetCommandHandler(),
                 // Options
                 ProcessIdOption(),
-                NameOption(),
                 DurationOption()
             };
 
@@ -202,14 +185,6 @@ namespace Microsoft.Diagnostics.Tools.Stack
                 description: "The process id to collect the trace.")
             {
                 Argument = new Argument<int>(name: "pid")
-            };
-
-        public static Option NameOption() =>
-            new Option(
-                aliases: new[] { "-n", "--name" },
-                description: "The name of the process to collect the trace.")
-            {
-                Argument = new Argument<string>(name: "name")
             };
     }
 }
