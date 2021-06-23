@@ -171,9 +171,20 @@ export LD_LIBRARY_PATH=%{_builddir}/%{name}-%{version}/libicu-57.1
 # SOS
 mkdir -p %{buildroot}%{netcoreappdir}
 cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/*.so %{buildroot}%{netcoreappdir}
-cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/SOS.NETCore.dll %{buildroot}%{netcoreappdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Bcl.AsyncInterfaces.dll %{buildroot}%{netcoreappdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.DebugServices.Implementation.dll %{buildroot}%{netcoreappdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.DebugServices.dll %{buildroot}%{netcoreappdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.ExtensionCommands.dll %{buildroot}%{netcoreappdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.NETCore.Client.dll %{buildroot}%{netcoreappdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.Repl.dll %{buildroot}%{netcoreappdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.Runtime.Utilities.dll %{buildroot}%{netcoreappdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.Runtime.dll %{buildroot}%{netcoreappdir}
 cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.FileFormats.dll %{buildroot}%{netcoreappdir}
 cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.SymbolStore.dll %{buildroot}%{netcoreappdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/SOS.Extensions.dll %{buildroot}%{netcoreappdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/SOS.Hosting.dll %{buildroot}%{netcoreappdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/SOS.InstallHelper.dll %{buildroot}%{netcoreappdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/System.CommandLine.dll %{buildroot}%{netcoreappdir}
 
 # Tools
 mkdir -p %{buildroot}%{toolsdir}/%{rid}
