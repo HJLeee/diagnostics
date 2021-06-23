@@ -185,6 +185,10 @@ function InstallDotNet {
   local root=$1
   local version=$2
 
+  if [[ -n $TIZEN_LOCAL_BUILD ]]; then
+    ExitWithExitCode 0
+  fi;
+
   GetDotNetInstallScript "$root"
   local install_script=$_GetDotNetInstallScript
 
