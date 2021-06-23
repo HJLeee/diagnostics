@@ -182,12 +182,6 @@ for name in counters dump gcdump trace; do
   cp -f %{_artifacts}/dotnet-${name}/%{_buildtype}/netcoreapp*/publish/*.dll %{buildroot}%{toolsdir}
 done
 
-%ifnarch %{ix86}
-for f in $(grep -L "dotnet-" %{buildroot}%{toolsdir}/*.dll); do
-  %{_datarootdir}/dotnet.tizen/netcoreapp/crossgen /ReadyToRun /p %{_datarootdir}/dotnet.tizen/netcoreapp:`dirname $f` $f
-done
-%endif
-
 %files
 %manifest %{name}.manifest
 %{netcoreappdir}/*
