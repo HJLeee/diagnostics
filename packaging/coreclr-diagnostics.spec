@@ -30,9 +30,15 @@ BuildRequires: pkgconfig(uuid)
 BuildRequires: python
 BuildRequires: tizen-release
 
-%ifarch %{arm}
+%ifarch armv7l
 BuildRequires: python-accel-armv7l-cross-arm
 BuildRequires: clang-accel-armv7l-cross-arm
+BuildRequires: patchelf
+%endif
+
+%ifarch armv7hl
+BuildRequires: python-accel-armv7hl-cross-arm
+BuildRequires: clang-accel-armv7hl-cross-arm
 BuildRequires: patchelf
 %endif
 
@@ -76,7 +82,7 @@ This package contains a collection of .NET diagnostic tools.
 %setup -q -n %{name}-%{version}
 cp %{SOURCE1} .
 
-%ifarch %{arm} aarch64
+%ifarch armv7l armv7hl aarch64
 # Detect interpreter name from cross-gcc
 LD_INTERPRETER=$(patchelf --print-interpreter /emul/usr/bin/gcc)
 LD_RPATH=$(patchelf --print-rpath /emul/usr/bin/gcc)
@@ -115,11 +121,16 @@ export CLANG_NO_LIBDIR_SUFFIX=1
 BASE_FLAGS=$(echo $BASE_FLAGS | sed -e 's/--target=i686/--target=i586/')
 BASE_FLAGS="$BASE_FLAGS -mstackrealign"
 %else
-%ifarch %{arm}
+%ifarch armv7l
 %define _barch  armel
 export CLANG_NO_LIBDIR_SUFFIX=1
 %else
+%ifarch armv7hl
+%define _barch  arm
+export CLANG_NO_LIBDIR_SUFFIX=1
+%else
 
+%endif
 %endif
 %endif
 %endif
@@ -132,7 +143,7 @@ export ASMFLAGS="${BASE_FLAGS}"
 %define _buildtype %{dotnet_buildtype}
 %define _artifacts artifacts/bin
 
-%ifarch %{arm}
+%ifarch armv7l armv7hl
 %if %{dotnet_buildtype} == "Release"
 export CXXFLAGS+="-fstack-protector-strong -D_FORTIFY_SOURCE=2"
 %else
@@ -159,7 +170,7 @@ export LD_LIBRARY_PATH=%{_builddir}/%{name}-%{version}/libicu-57.1
 %ifarch %{ix86}
 %define rid linux-x86
 %else
-%ifarch %{arm}
+%ifarch armv7l armv7hl
 %define rid linux-arm
 %else
 
