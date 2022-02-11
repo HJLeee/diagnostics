@@ -152,10 +152,10 @@ export CXXFLAGS+="-fstack-protector-strong"
 %endif
 
 export TIZEN_LOCAL_BUILD=1
-export NUGET_PACKAGES=%{_builddir}/%{name}-%{version}/packages
+export NUGET_PACKAGES=%{_builddir}/%{name}-%{version}/.packages
 export LD_LIBRARY_PATH=%{_builddir}/%{name}-%{version}/libicu-57.1
 
-./build.sh --portablebuild=false --configuration %{_buildtype} --architecture %{_barch} /p:NeedsPublishing=true /p:EnableSourceLink=false /p:EnableSourceControlManagerQueries=false
+./build.sh --portablebuild=false -configuration %{_buildtype} -architecture %{_barch} /p:NeedsPublishing=true /p:EnableSourceLink=false /p:EnableSourceControlManagerQueries=false
 
 %install
 %define netcoreappdir   %{_datadir}/dotnet/shared/Microsoft.NETCore.App/%{dotnet_version}

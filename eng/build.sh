@@ -156,15 +156,15 @@ if [ "$__CrossBuild" == true ]; then
     fi
 fi
 
-mkdir -p "$__IntermediatesDir"
-mkdir -p "$__LogDir"
-mkdir -p "$__CMakeBinDir"
-
 build_native()
 {
-    platformArch="$1"
-    intermediatesForBuild="$2"
-    extraCmakeArguments="$3"
+    targetOS="$1"
+    platformArch="$2"
+    cmakeDir="$3"
+    intermediatesForBuild="$4"
+    target="$5"
+    extraCmakeArguments="$6"
+    message="$7"
 
     # All set to commence the build
     echo "Commencing $__DistroRid build for $__BuildOS.$__BuildArch.$__BuildType in $intermediatesForBuild"
@@ -172,11 +172,12 @@ build_native()
     generator=""
     buildFile="Makefile"
     buildTool="make"
-    scriptDir="$__ProjectRoot/eng"
+    scriptDir="$__RepoRootDir/eng"
 
     pushd "$intermediatesForBuild"
-    echo "Invoking \"$scriptDir/gen-buildsys-clang.sh\" \"$__ProjectRoot\" $__ClangMajorVersion \"$__ClangMinorVersion\" $platformArch "$scriptDir" $__BuildType $generator $extraCmakeArguments"
-    "$scriptDir/gen-buildsys-clang.sh" "$__ProjectRoot" $__ClangMajorVersion "$__ClangMinorVersion" $platformArch "$scriptDir" $__BuildType $generator "$extraCmakeArguments"
+    next_command="\"$scriptDir/native/gen-buildsys.sh\" \"$cmakeDir\" \"$intermediatesForBuild\" $platformArch $__Compiler \"$__CompilerMajorVersion\" \"$__CompilerMinorVersion\" $__BuildType \"$generator\" $scan_build $extraCmakeArguments"
+    echo "Invoking $next_command"
+    eval $next_command
     popd
 
     if [ ! -f "$intermediatesForBuild/$buildFile" ]; then
@@ -200,7 +201,7 @@ build_native()
 
 initTargetDistroRid()
 {
-    source "$__ProjectRoot/eng/init-distro-rid.sh"
+    source "$__RepoRootDir/eng/native/init-distro-rid.sh"
 
     local passedRootfsDir=""
 
