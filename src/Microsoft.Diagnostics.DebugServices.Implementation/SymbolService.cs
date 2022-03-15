@@ -334,7 +334,26 @@ namespace Microsoft.Diagnostics.DebugServices.Implementation
             if (Directory.Exists(symbolDirectoryPath))
             {
                 // Add all subdirectories.
-                probingPaths.AddRange(Directory.GetDirectories(symbolDirectoryPath, "*", SearchOption.AllDirectories));
+                // Note, for proper result order we use Breadth-first search algorithm here.
+                Queue<string> pathsCheck = new Queue<string>();
+                pathsCheck.Enqueue(symbolDirectoryPath);
+
+                while (pathsCheck.Count > 0)
+                {
+                    string path = pathsCheck.Dequeue();
+                    try
+                    {
+                        // Note, at this line we could have `UnauthorizedAccessException` exception due to SMACK or file access permisions,
+                        // this directory and all its subdirectories must be ignored and not added into `probingPaths` list.
+                        string[] subdirectoryEntries = Directory.GetDirectories(path);
+                        foreach (string subdirectory in subdirectoryEntries)
+                        {
+                            pathsCheck.Enqueue(subdirectory);
+                        }
+                        probingPaths.Add(path);
+                    }
+                    catch (UnauthorizedAccessException) { }
+                }
             }
             // Make sure the root directory is enumerated last so that it comes first in the fallback tree.
             foreach (var path in Enumerable.Reverse(probingPaths))
