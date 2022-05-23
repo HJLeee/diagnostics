@@ -158,7 +158,7 @@ export LD_LIBRARY_PATH=%{_builddir}/%{name}-%{version}/libicu-57.1
 ./build.sh --portablebuild=false -configuration %{_buildtype} -architecture %{_barch} /p:NeedsPublishing=true /p:EnableSourceLink=false /p:EnableSourceControlManagerQueries=false
 
 %install
-%define netcoreappdir   %{_datadir}/dotnet/shared/Microsoft.NETCore.App/%{dotnet_version}
+%define diagnosticsdir   %{_datadir}/dotnet/shared/Microsoft.NETCore.App/%{dotnet_version}/SOS
 %define toolsdir        /home/owner/share/.dotnet/tools
 
 %ifarch x86_64
@@ -180,23 +180,23 @@ export LD_LIBRARY_PATH=%{_builddir}/%{name}-%{version}/libicu-57.1
 %endif
 
 # SOS
-mkdir -p %{buildroot}%{netcoreappdir}
-cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/*.so %{buildroot}%{netcoreappdir}
-cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Bcl.AsyncInterfaces.dll %{buildroot}%{netcoreappdir}
-cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.DebugServices.Implementation.dll %{buildroot}%{netcoreappdir}
-cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.DebugServices.dll %{buildroot}%{netcoreappdir}
-cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.ExtensionCommands.dll %{buildroot}%{netcoreappdir}
-cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.NETCore.Client.dll %{buildroot}%{netcoreappdir}
-cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.Repl.dll %{buildroot}%{netcoreappdir}
-cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.Runtime.Utilities.dll %{buildroot}%{netcoreappdir}
-cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.Runtime.dll %{buildroot}%{netcoreappdir}
-cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.FileFormats.dll %{buildroot}%{netcoreappdir}
-cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.SymbolStore.dll %{buildroot}%{netcoreappdir}
-cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/SOS.Extensions.dll %{buildroot}%{netcoreappdir}
-cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/SOS.Hosting.dll %{buildroot}%{netcoreappdir}
-cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/SOS.InstallHelper.dll %{buildroot}%{netcoreappdir}
-cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/System.CommandLine.dll %{buildroot}%{netcoreappdir}
-cp -f %{_artifacts}/dotnet-sos/%{_buildtype}/netcoreapp*/publish/*/sosdocsunix.txt %{buildroot}%{netcoreappdir}
+mkdir -p %{buildroot}%{diagnosticsdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/*.so %{buildroot}%{diagnosticsdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Bcl.AsyncInterfaces.dll %{buildroot}%{diagnosticsdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.DebugServices.Implementation.dll %{buildroot}%{diagnosticsdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.DebugServices.dll %{buildroot}%{diagnosticsdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.ExtensionCommands.dll %{buildroot}%{diagnosticsdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.NETCore.Client.dll %{buildroot}%{diagnosticsdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.Repl.dll %{buildroot}%{diagnosticsdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.Runtime.Utilities.dll %{buildroot}%{diagnosticsdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.Runtime.dll %{buildroot}%{diagnosticsdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.FileFormats.dll %{buildroot}%{diagnosticsdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.SymbolStore.dll %{buildroot}%{diagnosticsdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/SOS.Extensions.dll %{buildroot}%{diagnosticsdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/SOS.Hosting.dll %{buildroot}%{diagnosticsdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/SOS.InstallHelper.dll %{buildroot}%{diagnosticsdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/System.CommandLine.dll %{buildroot}%{diagnosticsdir}
+cp -f %{_artifacts}/dotnet-sos/%{_buildtype}/netcoreapp*/publish/*/sosdocsunix.txt %{buildroot}%{diagnosticsdir}
 
 # Tools
 mkdir -p %{buildroot}%{toolsdir}/%{rid}
@@ -208,7 +208,7 @@ cp -f %{_artifacts}/dotnet-dump/%{_buildtype}/netcoreapp*/publish/*/sosdocsunix.
 
 %files
 %manifest %{name}.manifest
-%{netcoreappdir}/*
+%{diagnosticsdir}/*
 
 %files tools
 %manifest %{name}.manifest
