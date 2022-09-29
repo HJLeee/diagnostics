@@ -183,20 +183,27 @@ export LD_LIBRARY_PATH=%{_builddir}/%{name}-%{version}/libicu-57.1
 mkdir -p %{buildroot}%{diagnosticsdir}
 cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/*.so %{buildroot}%{diagnosticsdir}
 cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Bcl.AsyncInterfaces.dll %{buildroot}%{diagnosticsdir}
-cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.DebugServices.Implementation.dll %{buildroot}%{diagnosticsdir}
 cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.DebugServices.dll %{buildroot}%{diagnosticsdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.DebugServices.Implementation.dll %{buildroot}%{diagnosticsdir}
 cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.ExtensionCommands.dll %{buildroot}%{diagnosticsdir}
 cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.NETCore.Client.dll %{buildroot}%{diagnosticsdir}
-cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.Repl.dll %{buildroot}%{diagnosticsdir}
-cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.Runtime.Utilities.dll %{buildroot}%{diagnosticsdir}
 cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.Runtime.dll %{buildroot}%{diagnosticsdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.Runtime.Utilities.dll %{buildroot}%{diagnosticsdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Extensions.Configuration.Abstractions.dll %{buildroot}%{diagnosticsdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Extensions.Configuration.Binder.dll %{buildroot}%{diagnosticsdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Extensions.Configuration.dll %{buildroot}%{diagnosticsdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Extensions.DependencyInjection.Abstractions.dll %{buildroot}%{diagnosticsdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Extensions.Logging.Abstractions.dll %{buildroot}%{diagnosticsdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Extensions.Logging.dll %{buildroot}%{diagnosticsdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Extensions.Options.dll %{buildroot}%{diagnosticsdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Extensions.Primitives.dll %{buildroot}%{diagnosticsdir}
 cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.FileFormats.dll %{buildroot}%{diagnosticsdir}
 cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.SymbolStore.dll %{buildroot}%{diagnosticsdir}
 cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/SOS.Extensions.dll %{buildroot}%{diagnosticsdir}
 cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/SOS.Hosting.dll %{buildroot}%{diagnosticsdir}
 cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/SOS.InstallHelper.dll %{buildroot}%{diagnosticsdir}
 cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/System.CommandLine.dll %{buildroot}%{diagnosticsdir}
-cp -f %{_artifacts}/dotnet-sos/%{_buildtype}/netcoreapp*/publish/*/sosdocsunix.txt %{buildroot}%{diagnosticsdir}
+cp -f %{_artifacts}/Linux.%{_barch}.%{_buildtype}/sosdocsunix.txt %{buildroot}%{diagnosticsdir}
 
 # Tools
 mkdir -p %{buildroot}%{toolsdir}/%{rid}
