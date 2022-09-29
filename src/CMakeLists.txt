@@ -19,4 +19,4 @@ if (CLR_CMAKE_HOST_UNIX)
   include_directories(${CLR_SHARED_DIR}/pal/inc/rt/cpp)
 endif(CLR_CMAKE_HOST_UNIX)
 
-add_subdirectory(dbgshim)
+#add_subdirectory(dbgshim)
