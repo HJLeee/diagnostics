@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>System.CommandLine</id>
+    <version>2.0.0-beta1.20468.1</version>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>Icon.png</icon>
+    <projectUrl>https://github.com/dotnet/command-line-api</projectUrl>
+    <description>This package includes a powerful command line parser and other tools for building command line applications, including:
+    
+    * Shell-agnostic support for command line completions
+    * Method invocation and an extensible middleware pipeline
+    * Constructor- and property-based model binding for complex types
+    * Test and debug support</description>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <serviceable>true</serviceable>
+    <repository type="git" url="https://github.com/dotnet/command-line-api" commit="08d0408ce80894e1c9801f05561fc7b8b583c390" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Microsoft.CSharp" version="4.4.1" exclude="Build,Analyzers" />
+        <dependency id="system.memory" version="4.5.4" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

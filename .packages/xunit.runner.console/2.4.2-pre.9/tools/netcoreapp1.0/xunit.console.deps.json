@@ -1,0 +1,106 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v1.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v1.0": {
+      "xunit.console/2.4.2-pre.9": {
+        "dependencies": {
+          "Microsoft.SourceLink.GitHub": "1.0.0",
+          "Nerdbank.GitVersioning": "3.4.231",
+          "xunit.runner.reporters": "1.0.0"
+        },
+        "runtime": {
+          "xunit.console.dll": {}
+        }
+      },
+      "Microsoft.Build.Tasks.Git/1.0.0": {},
+      "Microsoft.SourceLink.Common/1.0.0": {},
+      "Microsoft.SourceLink.GitHub/1.0.0": {
+        "dependencies": {
+          "Microsoft.Build.Tasks.Git": "1.0.0",
+          "Microsoft.SourceLink.Common": "1.0.0"
+        }
+      },
+      "Nerdbank.GitVersioning/3.4.231": {},
+      "xunit.abstractions/2.0.3": {
+        "runtime": {
+          "lib/netstandard1.0/xunit.abstractions.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        }
+      },
+      "xunit.runner.reporters/1.0.0": {
+        "dependencies": {
+          "xunit.runner.utility": "1.0.0"
+        },
+        "runtime": {
+          "xunit.runner.reporters.netcoreapp10.dll": {}
+        }
+      },
+      "xunit.runner.utility/1.0.0": {
+        "dependencies": {
+          "xunit.abstractions": "2.0.3"
+        },
+        "runtime": {
+          "xunit.runner.utility.netcoreapp10.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "xunit.console/2.4.2-pre.9": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Build.Tasks.Git/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-z2fpmmt+1Jfl+ZnBki9nSP08S1/tbEOxFdsK1rSR+LBehIJz1Xv9/6qOOoGNqlwnAGGVGis1Oj6S8Kt9COEYlQ==",
+      "path": "microsoft.build.tasks.git/1.0.0",
+      "hashPath": "microsoft.build.tasks.git.1.0.0.nupkg.sha512"
+    },
+    "Microsoft.SourceLink.Common/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-G8DuQY8/DK5NN+3jm5wcMcd9QYD90UV7MiLmdljSJixi3U/vNaeBKmmXUqI4DJCOeWizIUEh4ALhSt58mR+5eg==",
+      "path": "microsoft.sourcelink.common/1.0.0",
+      "hashPath": "microsoft.sourcelink.common.1.0.0.nupkg.sha512"
+    },
+    "Microsoft.SourceLink.GitHub/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aZyGyGg2nFSxix+xMkPmlmZSsnGQ3w+mIG23LTxJZHN+GPwTQ5FpPgDo7RMOq+Kcf5D4hFWfXkGhoGstawX13Q==",
+      "path": "microsoft.sourcelink.github/1.0.0",
+      "hashPath": "microsoft.sourcelink.github.1.0.0.nupkg.sha512"
+    },
+    "Nerdbank.GitVersioning/3.4.231": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ifpSbv0sySgIVymTQQz0pjI6O7o/JxnIQMlj28JF5Ybr1LoUTcMfoKnAKwteRlhpQM9qJmONGy9M8BgrEcOteg==",
+      "path": "nerdbank.gitversioning/3.4.231",
+      "hashPath": "nerdbank.gitversioning.3.4.231.nupkg.sha512"
+    },
+    "xunit.abstractions/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pot1I4YOxlWjIb5jmwvvQNbTrZ3lJQ+jUGkGjWE3hEFM0l5gOnBWS+H3qsex68s5cO52g+44vpGzhAt+42vwKg==",
+      "path": "xunit.abstractions/2.0.3",
+      "hashPath": "xunit.abstractions.2.0.3.nupkg.sha512"
+    },
+    "xunit.runner.reporters/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "xunit.runner.utility/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

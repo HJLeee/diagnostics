@@ -1,0 +1,2 @@
+microsoft.net.workload.mono.toolchain
+microsoft.net.workload.emscripten

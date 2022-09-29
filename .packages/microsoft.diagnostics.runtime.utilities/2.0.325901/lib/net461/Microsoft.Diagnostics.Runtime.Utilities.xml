@@ -1,0 +1,284 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Diagnostics.Runtime.Utilities</name>
+    </assembly>
+    <members>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.SOURCE_PATH_HAS_SOURCE_SERVER">
+            <summary>
+            InBuffer - Unused.
+            OutBuffer - Unused.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.TARGET_EXCEPTION_CONTEXT">
+            <summary>
+            InBuffer - Unused.
+            OutBuffer - Machine-specific CONTEXT.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.TARGET_EXCEPTION_THREAD">
+            <summary>
+            InBuffer - Unused.
+            OutBuffer - ULONG system ID of thread.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.TARGET_EXCEPTION_RECORD">
+            <summary>
+            InBuffer - Unused.
+            OutBuffer - EXCEPTION_RECORD64.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.GET_ADDITIONAL_CREATE_OPTIONS">
+            <summary>
+            InBuffer - Unused.
+            OutBuffer - DEBUG_CREATE_PROCESS_OPTIONS.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.SET_ADDITIONAL_CREATE_OPTIONS">
+            <summary>
+            InBuffer - DEBUG_CREATE_PROCESS_OPTIONS.
+            OutBuffer - Unused.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.GET_WIN32_MAJOR_MINOR_VERSIONS">
+            <summary>
+            InBuffer - Unused.
+            OutBuffer - ULONG[2] major/minor.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.READ_USER_MINIDUMP_STREAM">
+            <summary>
+            InBuffer - DEBUG_READ_USER_MINIDUMP_STREAM.
+            OutBuffer - Unused.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.TARGET_CAN_DETACH">
+            <summary>
+            InBuffer - Unused.
+            OutBuffer - Unused.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.SET_LOCAL_IMPLICIT_COMMAND_LINE">
+            <summary>
+            InBuffer - PTSTR.
+            OutBuffer - Unused.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.GET_CAPTURED_EVENT_CODE_OFFSET">
+            <summary>
+            InBuffer - Unused.
+            OutBuffer - Event code stream offset.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.READ_CAPTURED_EVENT_CODE_STREAM">
+            <summary>
+            InBuffer - Unused.
+            OutBuffer - Event code stream information.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.EXT_TYPED_DATA_ANSI">
+            <summary>
+            InBuffer - Input data block.
+            OutBuffer - Processed data block.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.GET_EXTENSION_SEARCH_PATH_WIDE">
+            <summary>
+            InBuffer - Unused.
+            OutBuffer - Returned path.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.GET_TEXT_COMPLETIONS_WIDE">
+            <summary>
+            InBuffer - DEBUG_GET_TEXT_COMPLETIONS_IN.
+            OutBuffer - DEBUG_GET_TEXT_COMPLETIONS_OUT.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.GET_CACHED_SYMBOL_INFO">
+            <summary>
+            InBuffer - ULONG64 cookie.
+            OutBuffer - DEBUG_CACHED_SYMBOL_INFO.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.ADD_CACHED_SYMBOL_INFO">
+            <summary>
+            InBuffer - DEBUG_CACHED_SYMBOL_INFO.
+            OutBuffer - ULONG64 cookie.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.REMOVE_CACHED_SYMBOL_INFO">
+            <summary>
+            InBuffer - ULONG64 cookie.
+            OutBuffer - Unused.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.GET_TEXT_COMPLETIONS_ANSI">
+            <summary>
+            InBuffer - DEBUG_GET_TEXT_COMPLETIONS_IN.
+            OutBuffer - DEBUG_GET_TEXT_COMPLETIONS_OUT.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.CURRENT_OUTPUT_CALLBACKS_ARE_DML_AWARE">
+            <summary>
+            InBuffer - Unused.
+            OutBuffer - Unused.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.GET_OFFSET_UNWIND_INFORMATION">
+            <summary>
+            InBuffer - ULONG64 offset.
+            OutBuffer - Unwind information.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.GET_DUMP_HEADER">
+            <summary>
+            InBuffer - Unused
+            OutBuffer - returned DUMP_HEADER32/DUMP_HEADER64 structure.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.SET_DUMP_HEADER">
+            <summary>
+            InBuffer - DUMP_HEADER32/DUMP_HEADER64 structure.
+            OutBuffer - Unused
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.MIDORI">
+            <summary>
+            InBuffer - Midori specific
+            OutBuffer - Midori specific
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.PROCESS_DESCRIPTORS">
+            <summary>
+            InBuffer - Unused
+            OutBuffer - PROCESS_NAME_ENTRY blocks
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.MISC_INFORMATION">
+            <summary>
+            InBuffer - Unused
+            OutBuffer - MINIDUMP_MISC_INFO_N blocks
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.OPEN_PROCESS_TOKEN">
+            <summary>
+            InBuffer - Unused
+            OutBuffer - ULONG64 as TokenHandle value
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.OPEN_THREAD_TOKEN">
+            <summary>
+            InBuffer - Unused
+            OutBuffer - ULONG64 as TokenHandle value
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.DUPLICATE_TOKEN">
+            <summary>
+            InBuffer -  ULONG64 as TokenHandle being duplicated
+            OutBuffer - ULONG64 as new duplicated TokenHandle
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.QUERY_INFO_TOKEN">
+            <summary>
+            InBuffer - a ULONG64 as TokenHandle and a ULONG as NtQueryInformationToken() request code
+            OutBuffer - NtQueryInformationToken() return
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.CLOSE_TOKEN">
+            <summary>
+            InBuffer - ULONG64 as TokenHandle
+            OutBuffer - Unused
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.WOW_PROCESS">
+            <summary>
+            InBuffer - ULONG64 for process server identification and ULONG as PID
+            OutBuffer - Unused
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.WOW_MODULE">
+            <summary>
+            InBuffer - ULONG64 for process server identification and PWSTR as module path
+            OutBuffer - Unused
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.LIVE_USER_NON_INVASIVE">
+            <summary>
+            InBuffer - Unused
+            OutBuffer - Unused
+            return - S_OK if non-invasive user-mode attach, S_FALSE if not (but still live user-mode), E_FAIL otherwise.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_REQUEST.RESUME_THREAD">
+            <summary>
+            InBuffer - TID
+            OutBuffer - Unused
+            return - ResumeThreads() return.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_STATUS_FLAGS.INSIDE_WAIT">
+            <summary>
+            This bit is added in DEBUG_CES_EXECUTION_STATUS notifications when the
+            engines execution status is changing due to operations performed during a
+            wait, such as making synchronous callbacks. If the bit is not set the
+            execution status is changing due to a wait being satisfied.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_STATUS_FLAGS.WAIT_TIMEOUT">
+            <summary>
+            This bit is added in DEBUG_CES_EXECUTION_STATUS notifications when the
+            engines execution status update is coming after a wait has timed-out. It
+            indicates that the execution status change was not due to an actual event.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.ECreationDisposition.New">
+            <summary>
+            Creates a new file. The function fails if a specified file exists.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.ECreationDisposition.CreateAlways">
+            <summary>
+            Creates a new file, always.
+            If a file exists, the function overwrites the file, clears the existing attributes, combines the specified file attributes,
+            and flags with FILE_ATTRIBUTE_ARCHIVE, but does not set the security descriptor that the SECURITY_ATTRIBUTES structure specifies.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.ECreationDisposition.OpenExisting">
+            <summary>
+            Opens a file. The function fails if the file does not exist.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.ECreationDisposition.OpenAlways">
+            <summary>
+            Opens a file, always.
+            If a file does not exist, the function creates a file as if dwCreationDisposition is CREATE_NEW.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.ECreationDisposition.TruncateExisting">
+            <summary>
+            Opens a file and truncates it so that its size is 0 (zero) bytes. The function fails if the file does not exist.
+            The calling process must open the file with the GENERIC_WRITE access right.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Diagnostics.Runtime.Interop.IDebugOutputCallbacks2.Output(Microsoft.Diagnostics.Runtime.Interop.DEBUG_OUTPUT,System.String)">
+            <summary>
+            This method is not used.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Diagnostics.Runtime.Interop.DEBUG_MODULE_AND_ID">
+            <summary>
+            Describes a symbol within a module.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_MODULE_AND_ID.ModuleBase">
+            <summary>
+            The location in the target's virtual address space of the module's base address.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Diagnostics.Runtime.Interop.DEBUG_MODULE_AND_ID.Id">
+            <summary>
+            The symbol ID of the symbol within the module.
+            </summary>
+        </member>
+    </members>
+</doc>

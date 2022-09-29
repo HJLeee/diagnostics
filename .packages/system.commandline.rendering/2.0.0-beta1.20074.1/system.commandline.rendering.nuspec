@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>System.CommandLine.Rendering</id>
+    <version>2.0.0-beta1.20074.1</version>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>Icon.png</icon>
+    <projectUrl>https://github.com/dotnet/command-line-api</projectUrl>
+    <description>This package provides support for structured command line output rendering. Write code once that renders correctly in multiple output modes, including System.Console, virtual terminal (using ANSI escape sequences), and plain text.</description>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <serviceable>true</serviceable>
+    <repository type="git" url="https://github.com/dotnet/command-line-api" commit="a59970671f92ff1cb15b0e242f5f99593a51e99b" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="System.CommandLine" version="2.0.0-beta1.20074.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

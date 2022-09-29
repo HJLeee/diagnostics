@@ -1,0 +1,144 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Microsoft.NET.Sdk.BlazorWebAssembly.Tool/7.0.100-preview.2.22153.14": {
+        "dependencies": {
+          "Microsoft.DiaSymReader.Pdb2Pdb": "1.1.0-beta2-19575-01",
+          "Microsoft.DotNet.XliffTasks": "1.0.0-beta.22079.1",
+          "Microsoft.SourceLink.AzureRepos.Git": "1.2.0-beta-22101-03",
+          "Microsoft.SourceLink.GitHub": "1.2.0-beta-22101-03",
+          "System.CommandLine": "2.0.0-beta3.22114.1"
+        },
+        "runtime": {
+          "Microsoft.NET.Sdk.BlazorWebAssembly.Tool.dll": {}
+        }
+      },
+      "Microsoft.Build.Tasks.Git/1.2.0-beta-22101-03": {},
+      "Microsoft.DiaSymReader.Pdb2Pdb/1.1.0-beta2-19575-01": {},
+      "Microsoft.DotNet.XliffTasks/1.0.0-beta.22079.1": {},
+      "Microsoft.SourceLink.AzureRepos.Git/1.2.0-beta-22101-03": {
+        "dependencies": {
+          "Microsoft.Build.Tasks.Git": "1.2.0-beta-22101-03",
+          "Microsoft.SourceLink.Common": "1.2.0-beta-22101-03"
+        }
+      },
+      "Microsoft.SourceLink.Common/1.2.0-beta-22101-03": {},
+      "Microsoft.SourceLink.GitHub/1.2.0-beta-22101-03": {
+        "dependencies": {
+          "Microsoft.Build.Tasks.Git": "1.2.0-beta-22101-03",
+          "Microsoft.SourceLink.Common": "1.2.0-beta-22101-03"
+        }
+      },
+      "System.CommandLine/2.0.0-beta3.22114.1": {
+        "runtime": {
+          "lib/net6.0/System.CommandLine.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.22.11401"
+          }
+        },
+        "resources": {
+          "lib/net6.0/cs/System.CommandLine.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/net6.0/de/System.CommandLine.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net6.0/es/System.CommandLine.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net6.0/fr/System.CommandLine.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net6.0/it/System.CommandLine.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net6.0/ja/System.CommandLine.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/net6.0/ko/System.CommandLine.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/net6.0/pl/System.CommandLine.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/net6.0/pt-BR/System.CommandLine.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net6.0/ru/System.CommandLine.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net6.0/tr/System.CommandLine.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/net6.0/zh-Hans/System.CommandLine.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/net6.0/zh-Hant/System.CommandLine.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.NET.Sdk.BlazorWebAssembly.Tool/7.0.100-preview.2.22153.14": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Build.Tasks.Git/1.2.0-beta-22101-03": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QZhJaem1tWQbhY5AKgrULgh22hpadVCftq2ZfqogvW2SeMX/SUmj0PKMc7/0Yo1W9SylEMjk5vupFQuruWVHwg==",
+      "path": "microsoft.build.tasks.git/1.2.0-beta-22101-03",
+      "hashPath": "microsoft.build.tasks.git.1.2.0-beta-22101-03.nupkg.sha512"
+    },
+    "Microsoft.DiaSymReader.Pdb2Pdb/1.1.0-beta2-19575-01": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kY6eTNkeWLHvfOjg97Q7tgQKrPpX+Y3fR6fS4nyfpgFLHBxHriLBR4v3e9t71it91gIMEeKUqOqrFJ7Pj48eHA==",
+      "path": "microsoft.diasymreader.pdb2pdb/1.1.0-beta2-19575-01",
+      "hashPath": "microsoft.diasymreader.pdb2pdb.1.1.0-beta2-19575-01.nupkg.sha512"
+    },
+    "Microsoft.DotNet.XliffTasks/1.0.0-beta.22079.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-22aWyH/z8ssvyFIynDmvTHY/RAHi1drMZEcOpP7Ycf0eylh1EFzccmQfgvVDDygtRMKe1H4rCBqZJ7tVirpwKQ==",
+      "path": "microsoft.dotnet.xlifftasks/1.0.0-beta.22079.1",
+      "hashPath": "microsoft.dotnet.xlifftasks.1.0.0-beta.22079.1.nupkg.sha512"
+    },
+    "Microsoft.SourceLink.AzureRepos.Git/1.2.0-beta-22101-03": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xaKS7sD9VHLdhLI8lZnQB/bHKXyXTkHVzZuqh4UKjGlnXhfbfchTNdQaVtzdpnNo8Zkd4gkuCVt8ObcZNtBfiw==",
+      "path": "microsoft.sourcelink.azurerepos.git/1.2.0-beta-22101-03",
+      "hashPath": "microsoft.sourcelink.azurerepos.git.1.2.0-beta-22101-03.nupkg.sha512"
+    },
+    "Microsoft.SourceLink.Common/1.2.0-beta-22101-03": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7/1Zn30ou8eqBT62ODSLa2NDeowtMuit8dcJvvcpuDB3eeOFrPrwoDmQPzN74M+/cQNS1KxXgUDoPiTqN2kPdw==",
+      "path": "microsoft.sourcelink.common/1.2.0-beta-22101-03",
+      "hashPath": "microsoft.sourcelink.common.1.2.0-beta-22101-03.nupkg.sha512"
+    },
+    "Microsoft.SourceLink.GitHub/1.2.0-beta-22101-03": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gZSfftAaow7ByQ7Ljo1zTvOhSph1n6ORoyhPd621AxkIwuefW1KZGX47SdRA1Wr7Jk6Vp+GGeunJ27hM0uxe5A==",
+      "path": "microsoft.sourcelink.github/1.2.0-beta-22101-03",
+      "hashPath": "microsoft.sourcelink.github.1.2.0-beta-22101-03.nupkg.sha512"
+    },
+    "System.CommandLine/2.0.0-beta3.22114.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QMzk1jj+PzdGbwuVsxII7FcQaCelnK+TcRcAqOGVoPovLBCSQPdikKiEzb56vAidvum5t4LSdDZ34O4j7+ALgw==",
+      "path": "system.commandline/2.0.0-beta3.22114.1",
+      "hashPath": "system.commandline.2.0.0-beta3.22114.1.nupkg.sha512"
+    }
+  }
+}

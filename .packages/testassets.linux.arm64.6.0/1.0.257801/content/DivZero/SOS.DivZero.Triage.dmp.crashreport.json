@@ -1,0 +1,713 @@
+{
+ "payload" : {
+  "protocol_version" : "1.0.0",
+  "configuration" : {
+   "architecture" : "arm64",
+   "version" : "6.0.21.46421 @Commit: b3a9b0b740cce9322b03200db0b4ab736d7cd12d "
+  },
+  "process_name" : "DivZero.dll",
+  "threads" : [
+   {
+    "is_managed" : "true",
+    "crashed" : "true",
+    "managed_exception_object" : "0xfffee0013470",
+    "managed_exception_type" : "System.DivideByZeroException",
+    "managed_exception_hresult" : "0x80020012",
+    "native_thread_id" : "0x22d14",
+    "ctx" : {
+     "IP" : "0xffff8769edec",
+     "SP" : "0xffffd9c5a2c0",
+     "BP" : "0xffffd9c5a2c0"
+    },
+    "stack_frames" : [
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff875f8000",
+      "stack_pointer" : "0xffffd9c5a2c0",
+      "native_address" : "0xffff8769edec",
+      "native_offset" : "0x8769edec",
+      "unmanaged_name" : "wait4",
+      "native_module" : "libc.so.6"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffffd9c5a300",
+      "native_address" : "0xffff8731a8f0",
+      "native_offset" : "0x8731a8f0",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffffd9c5a360",
+      "native_address" : "0xffff873189f8",
+      "native_offset" : "0x873189f8",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffffd9c5a380",
+      "native_address" : "0xffff873188d8",
+      "native_offset" : "0x873188d8",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffffd9c5a3b0",
+      "native_address" : "0xffff8710b098",
+      "native_offset" : "0x8710b098",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffffd9c5a8e0",
+      "native_address" : "0xffff8710b168",
+      "native_offset" : "0x8710b168",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffffd9c5aca0",
+      "native_address" : "0xffff8705e9c0",
+      "native_offset" : "0x8705e9c0",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "true",
+      "module_address" : "0xffff82371000",
+      "stack_pointer" : "0xffffd9c5ae20",
+      "native_address" : "0xffff0df8fdfc",
+      "native_offset" : "0x5c",
+      "token" : "0x6000001",
+      "il_offset" : "0x7",
+      "method_name" : "C.DivideByZero(Int32 ByRef, Int32 ByRef)",
+      "timestamp" : "0xc055e5c7",
+      "sizeofimage" : "0x8000",
+      "filename" : "DivZero.dll",
+      "guid" : "554033cfe8b3478084c75f38b2338290"
+     },
+     {
+      "is_managed" : "true",
+      "module_address" : "0xffff82371000",
+      "stack_pointer" : "0xffffd9c5ae50",
+      "native_address" : "0xffff0df8fd28",
+      "native_offset" : "0x58",
+      "token" : "0x6000002",
+      "il_offset" : "0xe",
+      "method_name" : "C.F3(Int32 ByRef, Int32 ByRef)",
+      "timestamp" : "0xc055e5c7",
+      "sizeofimage" : "0x8000",
+      "filename" : "DivZero.dll",
+      "guid" : "554033cfe8b3478084c75f38b2338290"
+     },
+     {
+      "is_managed" : "true",
+      "module_address" : "0xffff82371000",
+      "stack_pointer" : "0xffffd9c5ae90",
+      "native_address" : "0xffff0df8fc58",
+      "native_offset" : "0x50",
+      "token" : "0x6000003",
+      "il_offset" : "0xe",
+      "method_name" : "C.F2()",
+      "timestamp" : "0xc055e5c7",
+      "sizeofimage" : "0x8000",
+      "filename" : "DivZero.dll",
+      "guid" : "554033cfe8b3478084c75f38b2338290"
+     },
+     {
+      "is_managed" : "true",
+      "module_address" : "0xffff82371000",
+      "stack_pointer" : "0xffffd9c5aec0",
+      "native_address" : "0xffff0df8f054",
+      "native_offset" : "0x34",
+      "token" : "0x6000005",
+      "il_offset" : "0xc",
+      "method_name" : "C.Main(System.String[])",
+      "timestamp" : "0xc055e5c7",
+      "sizeofimage" : "0x8000",
+      "filename" : "DivZero.dll",
+      "guid" : "554033cfe8b3478084c75f38b2338290"
+     }
+    ]
+   },
+   {
+    "is_managed" : "false",
+    "crashed" : "false",
+    "native_thread_id" : "0x22d19",
+    "ctx" : {
+     "IP" : "0xffff876c8ad0",
+     "SP" : "0xffff86c32ee0",
+     "BP" : "0xffff86c32ef0"
+    },
+    "stack_frames" : [
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff875f8000",
+      "stack_pointer" : "0xffff86c32ee0",
+      "native_address" : "0xffff876c8ad0",
+      "native_offset" : "0x876c8ad0",
+      "unmanaged_name" : "syscall",
+      "native_module" : "libc.so.6"
+     }
+    ]
+   },
+   {
+    "is_managed" : "false",
+    "crashed" : "false",
+    "native_thread_id" : "0x22d1a",
+    "ctx" : {
+     "IP" : "0xffff876c8ad0",
+     "SP" : "0xffff86431ee0",
+     "BP" : "0xffff86431ef0"
+    },
+    "stack_frames" : [
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff875f8000",
+      "stack_pointer" : "0xffff86431ee0",
+      "native_address" : "0xffff876c8ad0",
+      "native_offset" : "0x876c8ad0",
+      "unmanaged_name" : "syscall",
+      "native_module" : "libc.so.6"
+     }
+    ]
+   },
+   {
+    "is_managed" : "false",
+    "crashed" : "false",
+    "native_thread_id" : "0x22d1b",
+    "ctx" : {
+     "IP" : "0xffff876c3128",
+     "SP" : "0xffff85c317f0",
+     "BP" : "0xffff85c317f0"
+    },
+    "stack_frames" : [
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff875f8000",
+      "stack_pointer" : "0xffff85c317f0",
+      "native_address" : "0xffff876c3128",
+      "native_offset" : "0x876c3128",
+      "unmanaged_name" : "__poll",
+      "native_module" : "libc.so.6"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff85c31850",
+      "native_address" : "0xffff87311c14",
+      "native_offset" : "0x87311c14",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff85c31860",
+      "native_address" : "0xffff873137ec",
+      "native_offset" : "0x873137ec",
+      "native_module" : "libcoreclr.so"
+     }
+    ]
+   },
+   {
+    "is_managed" : "false",
+    "crashed" : "false",
+    "native_thread_id" : "0x22d1c",
+    "ctx" : {
+     "IP" : "0xffff876c3128",
+     "SP" : "0xffff85427420",
+     "BP" : "0xffff85427420"
+    },
+    "stack_frames" : [
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff875f8000",
+      "stack_pointer" : "0xffff85427420",
+      "native_address" : "0xffff876c3128",
+      "native_offset" : "0x876c3128",
+      "unmanaged_name" : "__poll",
+      "native_module" : "libc.so.6"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff85427480",
+      "native_address" : "0xffff872064c4",
+      "native_offset" : "0x872064c4",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff854274e0",
+      "native_address" : "0xffff872c59e4",
+      "native_offset" : "0x872c59e4",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff85427830",
+      "native_address" : "0xffff872c3a50",
+      "native_offset" : "0x872c3a50",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff854278f0",
+      "native_address" : "0xffff8731cb7c",
+      "native_offset" : "0x8731cb7c",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff87a35000",
+      "stack_pointer" : "0xffff854279a0",
+      "native_address" : "0xffff87a3d4fc",
+      "native_offset" : "0x87a3d4fc",
+      "native_module" : "libpthread.so.0"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff875f8000",
+      "stack_pointer" : "0xffff85427ab0",
+      "native_address" : "0xffff876cc67c",
+      "native_offset" : "0x876cc67c",
+      "native_module" : "libc.so.6"
+     }
+    ]
+   },
+   {
+    "is_managed" : "false",
+    "crashed" : "false",
+    "native_thread_id" : "0x22d1d",
+    "ctx" : {
+     "IP" : "0xffff87a48768",
+     "SP" : "0xffff84c00210",
+     "BP" : "0xffff84c00210"
+    },
+    "stack_frames" : [
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff87a35000",
+      "stack_pointer" : "0xffff84c00210",
+      "native_address" : "0xffff87a48768",
+      "native_offset" : "0x87a48768",
+      "unmanaged_name" : "open64",
+      "native_module" : "libpthread.so.0"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff84c002a0",
+      "native_address" : "0xffff87207000",
+      "native_offset" : "0x87207000",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff84c002c0",
+      "native_address" : "0xffff87200e4c",
+      "native_offset" : "0x87200e4c",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff84c008e0",
+      "native_address" : "0xffff871fff08",
+      "native_offset" : "0x871fff08",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff84c008f0",
+      "native_address" : "0xffff8731cb7c",
+      "native_offset" : "0x8731cb7c",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff87a35000",
+      "stack_pointer" : "0xffff84c009a0",
+      "native_address" : "0xffff87a3d4fc",
+      "native_offset" : "0x87a3d4fc",
+      "native_module" : "libpthread.so.0"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff875f8000",
+      "stack_pointer" : "0xffff84c00ab0",
+      "native_address" : "0xffff876cc67c",
+      "native_offset" : "0x876cc67c",
+      "native_module" : "libc.so.6"
+     }
+    ]
+   },
+   {
+    "is_managed" : "false",
+    "crashed" : "false",
+    "native_thread_id" : "0x22d1e",
+    "ctx" : {
+     "IP" : "0xffff87a44038",
+     "SP" : "0xffff843f94c0",
+     "BP" : "0xffff843f94c0"
+    },
+    "stack_frames" : [
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff87a35000",
+      "stack_pointer" : "0xffff843f94c0",
+      "native_address" : "0xffff87a44038",
+      "native_offset" : "0x87a44038",
+      "unmanaged_name" : "pthread_cond_wait",
+      "native_module" : "libpthread.so.0"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff843f9590",
+      "native_address" : "0xffff8731192c",
+      "native_offset" : "0x8731192c",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff843f95f0",
+      "native_address" : "0xffff87311590",
+      "native_offset" : "0x87311590",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff843f9660",
+      "native_address" : "0xffff87315994",
+      "native_offset" : "0x87315994",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff843f9810",
+      "native_address" : "0xffff871fe624",
+      "native_offset" : "0x871fe624",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff843f98a0",
+      "native_address" : "0xffff871fe490",
+      "native_offset" : "0x871fe490",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff843f98e0",
+      "native_address" : "0xffff871fe228",
+      "native_offset" : "0x871fe228",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff843f98f0",
+      "native_address" : "0xffff8731cb7c",
+      "native_offset" : "0x8731cb7c",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff87a35000",
+      "stack_pointer" : "0xffff843f99a0",
+      "native_address" : "0xffff87a3d4fc",
+      "native_offset" : "0x87a3d4fc",
+      "native_module" : "libpthread.so.0"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff875f8000",
+      "stack_pointer" : "0xffff843f9ab0",
+      "native_address" : "0xffff876cc67c",
+      "native_offset" : "0x876cc67c",
+      "native_module" : "libc.so.6"
+     }
+    ]
+   },
+   {
+    "is_managed" : "true",
+    "crashed" : "false",
+    "native_thread_id" : "0x22d1f",
+    "ctx" : {
+     "IP" : "0xffff87a443a0",
+     "SP" : "0xffff8360a280",
+     "BP" : "0xffff8360a280"
+    },
+    "stack_frames" : [
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff87a35000",
+      "stack_pointer" : "0xffff8360a280",
+      "native_address" : "0xffff87a443a0",
+      "native_offset" : "0x87a443a0",
+      "unmanaged_name" : "pthread_cond_timedwait",
+      "native_module" : "libpthread.so.0"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff8360a370",
+      "native_address" : "0xffff87311918",
+      "native_offset" : "0x87311918",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff8360a3d0",
+      "native_address" : "0xffff87311590",
+      "native_offset" : "0x87311590",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff8360a440",
+      "native_address" : "0xffff87315994",
+      "native_offset" : "0x87315994",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff8360a5f0",
+      "native_address" : "0xffff87315bd8",
+      "native_offset" : "0x87315bd8",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff8360a620",
+      "native_address" : "0xffff870cf620",
+      "native_offset" : "0x870cf620",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff8360a6a0",
+      "native_address" : "0xffff87035634",
+      "native_offset" : "0x87035634",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff8360a700",
+      "native_address" : "0xffff870357f8",
+      "native_offset" : "0x870357f8",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff8360a760",
+      "native_address" : "0xffff86fb485c",
+      "native_offset" : "0x86fb485c",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff8360a890",
+      "native_address" : "0xffff86fb4ecc",
+      "native_offset" : "0x86fb4ecc",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff8360a8c0",
+      "native_address" : "0xffff87035a58",
+      "native_offset" : "0x87035a58",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff8360a8f0",
+      "native_address" : "0xffff8731cb7c",
+      "native_offset" : "0x8731cb7c",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff87a35000",
+      "stack_pointer" : "0xffff8360a9a0",
+      "native_address" : "0xffff87a3d4fc",
+      "native_offset" : "0x87a3d4fc",
+      "native_module" : "libpthread.so.0"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff875f8000",
+      "stack_pointer" : "0xffff8360aab0",
+      "native_address" : "0xffff876cc67c",
+      "native_offset" : "0x876cc67c",
+      "native_module" : "libc.so.6"
+     }
+    ]
+   },
+   {
+    "is_managed" : "true",
+    "crashed" : "false",
+    "native_thread_id" : "0x22d20",
+    "ctx" : {
+     "IP" : "0xffff87a443a0",
+     "SP" : "0xffff82b784d0",
+     "BP" : "0xffff82b784d0"
+    },
+    "stack_frames" : [
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff87a35000",
+      "stack_pointer" : "0xffff82b784d0",
+      "native_address" : "0xffff87a443a0",
+      "native_offset" : "0x87a443a0",
+      "unmanaged_name" : "pthread_cond_timedwait",
+      "native_module" : "libpthread.so.0"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff82b785c0",
+      "native_address" : "0xffff87311918",
+      "native_offset" : "0x87311918",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff82b78620",
+      "native_address" : "0xffff87311590",
+      "native_offset" : "0x87311590",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff82b78690",
+      "native_address" : "0xffff87316200",
+      "native_offset" : "0x87316200",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff82b786d0",
+      "native_address" : "0xffff86fb7dc8",
+      "native_offset" : "0x86fb7dc8",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff82b78750",
+      "native_address" : "0xffff86fb7c00",
+      "native_offset" : "0x86fb7c00",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff82b78770",
+      "native_address" : "0xffff86fb485c",
+      "native_offset" : "0x86fb485c",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff82b788a0",
+      "native_address" : "0xffff86fb4e18",
+      "native_offset" : "0x86fb4e18",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff82b788d0",
+      "native_address" : "0xffff86fb7b00",
+      "native_offset" : "0x86fb7b00",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff86e3f000",
+      "stack_pointer" : "0xffff82b788f0",
+      "native_address" : "0xffff8731cb7c",
+      "native_offset" : "0x8731cb7c",
+      "native_module" : "libcoreclr.so"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff87a35000",
+      "stack_pointer" : "0xffff82b789a0",
+      "native_address" : "0xffff87a3d4fc",
+      "native_offset" : "0x87a3d4fc",
+      "native_module" : "libpthread.so.0"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff875f8000",
+      "stack_pointer" : "0xffff82b78ab0",
+      "native_address" : "0xffff876cc67c",
+      "native_offset" : "0x876cc67c",
+      "native_module" : "libc.so.6"
+     }
+    ]
+   },
+   {
+    "is_managed" : "false",
+    "crashed" : "false",
+    "native_thread_id" : "0x22d21",
+    "ctx" : {
+     "IP" : "0xffff87a47e68",
+     "SP" : "0xffff80393900",
+     "BP" : "0xffff80393900"
+    },
+    "stack_frames" : [
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff87a35000",
+      "stack_pointer" : "0xffff80393900",
+      "native_address" : "0xffff87a47e68",
+      "native_offset" : "0x87a47e68",
+      "unmanaged_name" : "read",
+      "native_module" : "libpthread.so.0"
+     },
+     {
+      "is_managed" : "false",
+      "module_address" : "0xffff80395000",
+      "stack_pointer" : "0xffff80393930",
+      "native_address" : "0xffff803a3638",
+      "native_offset" : "0x803a3638",
+      "native_module" : "libSystem.Native.so"
+     }
+    ]
+   }
+  ]
+ }
+}

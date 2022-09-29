@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.Diagnostics.Runtime</id>
+    <version>2.0.325901</version>
+    <title>CLR Memory Diagnostics (ClrMD)</title>
+    <authors>Microsoft</authors>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>Icon.png</icon>
+    <projectUrl>https://github.com/Microsoft/clrmd</projectUrl>
+    <description>ClrMD is a set of advanced APIs for programmatically inspecting a crash dump of a .NET program much in the same way that the SOS Debugging Extensions (SOS) do. This allows you to write automated crash analysis for your applications as well as automate many common debugger tasks. In addition to reading crash dumps ClrMD also allows supports attaching to live processes.</description>
+    <releaseNotes>See https://github.com/Microsoft/clrmd/releases for the latest release notes</releaseNotes>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <serviceable>true</serviceable>
+    <repository type="git" url="https://github.com/Microsoft/clrmd" commit="a64d9ac11086f28fbd4b2b2337c19be7826fbfa9" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.6.1">
+        <dependency id="Microsoft.Diagnostics.NETCore.Client" version="0.2.251802" exclude="Build,Analyzers" />
+        <dependency id="System.Buffers" version="4.5.1" exclude="Build,Analyzers" />
+        <dependency id="System.Collections.Immutable" version="5.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Memory" version="4.5.4" exclude="Build,Analyzers" />
+        <dependency id="System.Reflection.Metadata" version="5.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Runtime.CompilerServices.Unsafe" version="5.0.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETCoreApp3.1">
+        <dependency id="Microsoft.Diagnostics.NETCore.Client" version="0.2.251802" exclude="Build,Analyzers" />
+        <dependency id="System.Buffers" version="4.5.1" exclude="Build,Analyzers" />
+        <dependency id="System.Collections.Immutable" version="5.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Memory" version="4.5.4" exclude="Build,Analyzers" />
+        <dependency id="System.Reflection.Metadata" version="5.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Runtime.CompilerServices.Unsafe" version="5.0.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework="net5.0">
+        <dependency id="Microsoft.Diagnostics.NETCore.Client" version="0.2.251802" exclude="Build,Analyzers" />
+        <dependency id="System.Buffers" version="4.5.1" exclude="Build,Analyzers" />
+        <dependency id="System.Collections.Immutable" version="5.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Memory" version="4.5.4" exclude="Build,Analyzers" />
+        <dependency id="System.Reflection.Metadata" version="5.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Runtime.CompilerServices.Unsafe" version="5.0.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Microsoft.Diagnostics.NETCore.Client" version="0.2.251802" exclude="Build,Analyzers" />
+        <dependency id="System.Buffers" version="4.5.1" exclude="Build,Analyzers" />
+        <dependency id="System.Collections.Immutable" version="5.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Memory" version="4.5.4" exclude="Build,Analyzers" />
+        <dependency id="System.Reflection.Metadata" version="5.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.Runtime.CompilerServices.Unsafe" version="5.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.DotNet.Build.Tasks.Feed</id>
+    <version>7.0.0-beta.22276.1</version>
+    <authors>Microsoft</authors>
+    <developmentDependency>true</developmentDependency>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>Icon.png</icon>
+    <projectUrl>https://github.com/dotnet/arcade</projectUrl>
+    <description>This package provides support for publishing assets to a NuGet protocol based feed.</description>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <serviceable>true</serviceable>
+    <packageTypes>
+      <packageType name="MSBuildSdk" />
+    </packageTypes>
+    <repository type="git" url="https://github.com/dotnet/arcade" commit="b8b67b243ba93bf9b89390c85b4dee034d3c5609" />
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="Microsoft.Win32.Primitives" targetFramework=".NETFramework4.7.2" />
+      <frameworkAssembly assemblyName="System.AppContext" targetFramework=".NETFramework4.7.2" />
+      <frameworkAssembly assemblyName="System.Console" targetFramework=".NETFramework4.7.2" />
+      <frameworkAssembly assemblyName="System.Diagnostics.TraceSource" targetFramework=".NETFramework4.7.2" />
+      <frameworkAssembly assemblyName="System.Diagnostics.Tracing" targetFramework=".NETFramework4.7.2" />
+      <frameworkAssembly assemblyName="System.Globalization.Calendars" targetFramework=".NETFramework4.7.2" />
+      <frameworkAssembly assemblyName="System.IO.Compression" targetFramework=".NETFramework4.7.2" />
+      <frameworkAssembly assemblyName="System.IO.Compression.ZipFile" targetFramework=".NETFramework4.7.2" />
+      <frameworkAssembly assemblyName="System.IO" targetFramework=".NETFramework4.7.2" />
+      <frameworkAssembly assemblyName="System.IO.FileSystem" targetFramework=".NETFramework4.7.2" />
+      <frameworkAssembly assemblyName="System.IO.FileSystem.Primitives" targetFramework=".NETFramework4.7.2" />
+      <frameworkAssembly assemblyName="System.Linq" targetFramework=".NETFramework4.7.2" />
+      <frameworkAssembly assemblyName="System.Linq.Expressions" targetFramework=".NETFramework4.7.2" />
+      <frameworkAssembly assemblyName="System.Net.Http" targetFramework=".NETFramework4.7.2" />
+      <frameworkAssembly assemblyName="System.Net.Sockets" targetFramework=".NETFramework4.7.2" />
+      <frameworkAssembly assemblyName="System.Reflection" targetFramework=".NETFramework4.7.2" />
+      <frameworkAssembly assemblyName="System.Runtime" targetFramework=".NETFramework4.7.2" />
+      <frameworkAssembly assemblyName="System.Runtime.Extensions" targetFramework=".NETFramework4.7.2" />
+      <frameworkAssembly assemblyName="System.Runtime.InteropServices" targetFramework=".NETFramework4.7.2" />
+      <frameworkAssembly assemblyName="System.Runtime.InteropServices.RuntimeInformation" targetFramework=".NETFramework4.7.2" />
+      <frameworkAssembly assemblyName="System.Security.Cryptography.Algorithms" targetFramework=".NETFramework4.7.2" />
+      <frameworkAssembly assemblyName="System.Security.Cryptography.Encoding" targetFramework=".NETFramework4.7.2" />
+      <frameworkAssembly assemblyName="System.Security.Cryptography.Primitives" targetFramework=".NETFramework4.7.2" />
+      <frameworkAssembly assemblyName="System.Security.Cryptography.X509Certificates" targetFramework=".NETFramework4.7.2" />
+      <frameworkAssembly assemblyName="System.Text.RegularExpressions" targetFramework=".NETFramework4.7.2" />
+      <frameworkAssembly assemblyName="System.Xml.ReaderWriter" targetFramework=".NETFramework4.7.2" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

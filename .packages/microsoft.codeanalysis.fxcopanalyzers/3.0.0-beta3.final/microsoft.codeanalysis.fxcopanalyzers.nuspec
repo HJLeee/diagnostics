@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.CodeAnalysis.FxCopAnalyzers</id>
+    <version>3.0.0-beta3.final+f9024057</version>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <developmentDependency>true</developmentDependency>
+    <license type="expression">Apache-2.0</license>
+    <licenseUrl>https://licenses.nuget.org/Apache-2.0</licenseUrl>
+    <projectUrl>https://github.com/dotnet/roslyn-analyzers</projectUrl>
+    <description>Microsoft recommended code quality rules and .NET API usage rules, including the most important FxCop rules, implemented as analyzers using the .NET Compiler Platform (Roslyn). These analyzers check your code for security, performance, and design issues, among others. The documentation for FxCop analyzers can be found at https://docs.microsoft.com/visualstudio/code-quality/install-fxcop-analyzers</description>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <tags>Roslyn CodeAnalysis Compiler CSharp VB VisualBasic Diagnostic Analyzers Syntax Semantics</tags>
+    <serviceable>true</serviceable>
+    <repository type="git" url="https://github.com/dotnet/roslyn-analyzers" commit="f902405734ee5206912ea46537947576d02f954f" />
+    <dependencies>
+      <dependency id="Microsoft.CodeQuality.Analyzers" version="[3.0.0-beta3.final, 3.0.0-beta3.final]" />
+      <dependency id="Microsoft.NetCore.Analyzers" version="[3.0.0-beta3.final, 3.0.0-beta3.final]" />
+      <dependency id="Microsoft.NetFramework.Analyzers" version="[3.0.0-beta3.final, 3.0.0-beta3.final]" />
+      <dependency id="Microsoft.CodeAnalysis.VersionCheckAnalyzer" version="[3.0.0-beta3.final, 3.0.0-beta3.final]" />
+    </dependencies>
+  </metadata>
+</package>

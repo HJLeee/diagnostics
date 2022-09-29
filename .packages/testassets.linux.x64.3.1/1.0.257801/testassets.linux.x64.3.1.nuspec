@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>TestAssets.Linux.x64.3.1</id>
+    <version>1.0.257801</version>
+    <title>TestAssets.Linux.x64.3.1</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://github.com/dotnet/diagnostics.git</projectUrl>
+    <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
+    <description>Test assets for Linux x64 on .NET 3.1.18 runtime</description>
+    <summary>Test assets</summary>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2021</copyright>
+    <language>en-US</language>
+    <serviceable>true</serviceable>
+  </metadata>
+</package>
