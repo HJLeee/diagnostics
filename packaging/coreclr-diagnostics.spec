@@ -212,6 +212,11 @@ for name in counters dump gcdump stack trace; do
   cp -f %{_artifacts}/dotnet-${name}/%{_buildtype}/netcoreapp*/publish/*.dll %{buildroot}%{toolsdir}
 done
 cp -f %{_artifacts}/dotnet-dump/%{_buildtype}/netcoreapp*/publish/*/sosdocsunix.txt %{buildroot}%{toolsdir}
+# remove CoreCLR system DLLs
+rm -f %{buildroot}%{toolsdir}/System.Collections.Immutable.dll
+rm -f %{buildroot}%{toolsdir}/System.Reflection.Metadata.dll
+rm -f %{buildroot}%{toolsdir}/System.Runtime.CompilerServices.Unsafe.dll
+
 
 %files
 %manifest %{name}.manifest
