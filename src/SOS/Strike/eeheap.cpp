@@ -1585,6 +1585,7 @@ BOOL GCHeapTraverse(const GCHeapDetails &heap, AllocInfo* pallocInfo, VISITGCHEA
                 }
 
                 dwAddrCurrObj = (DWORD_PTR)segment.mem;
+                continue;
             }
             else
             {
