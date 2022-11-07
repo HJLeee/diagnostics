@@ -1,9 +1,9 @@
 %{!?dotnet_buildtype: %define dotnet_buildtype Release}
 
-%define dotnet_version 6.0.0
+%define dotnet_version 6.0.9
 
 Name:       coreclr-diagnostics
-Version:    6.0.0
+Version:    6.0.328102
 Release:    0
 Summary:    Microsoft .NET Core runtime diagnostic tools
 Group:      Development/Languages
