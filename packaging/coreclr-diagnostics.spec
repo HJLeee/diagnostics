@@ -71,13 +71,6 @@ Requires: libuuid
 %description
 This package contains components for basic .NET debugging and diagnostic support.
 
-%package tools
-Summary:  Diagnostic tools
-Requires: coreclr-diagnostics
-
-%description tools
-This package contains a collection of .NET diagnostic tools.
-
 %prep
 %setup -q -n %{name}-%{version}
 cp %{SOURCE1} .
@@ -159,7 +152,6 @@ export LD_LIBRARY_PATH=%{_builddir}/%{name}-%{version}/libicu-57.1
 
 %install
 %define diagnosticsdir   %{_datadir}/dotnet/shared/Microsoft.NETCore.App/%{dotnet_version}/SOS
-%define toolsdir        /home/owner/share/.dotnet/tools
 
 %ifarch x86_64
 %define rid linux-x64
@@ -180,7 +172,7 @@ export LD_LIBRARY_PATH=%{_builddir}/%{name}-%{version}/libicu-57.1
 %endif
 
 # SOS
-mkdir -p %{buildroot}%{diagnosticsdir}
+mkdir -p %{buildroot}%{diagnosticsdir}/%{rid}
 cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/*.so %{buildroot}%{diagnosticsdir}
 cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Bcl.AsyncInterfaces.dll %{buildroot}%{diagnosticsdir}
 cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.DebugServices.dll %{buildroot}%{diagnosticsdir}
@@ -206,25 +198,19 @@ cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/System.CommandLine.dll %{buildroo
 cp -f %{_artifacts}/Linux.%{_barch}.%{_buildtype}/sosdocsunix.txt %{buildroot}%{diagnosticsdir}
 
 # Tools
-mkdir -p %{buildroot}%{toolsdir}/%{rid}
-cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/*.so %{buildroot}%{toolsdir}/%{rid}
 for name in counters dump gcdump stack trace; do
-  cp -f %{_artifacts}/dotnet-${name}/%{_buildtype}/netcoreapp*/publish/*.dll %{buildroot}%{toolsdir}
+  cp -f %{_artifacts}/dotnet-${name}/%{_buildtype}/netcoreapp*/publish/*.dll %{buildroot}%{diagnosticsdir}
 done
-cp -f %{_artifacts}/dotnet-dump/%{_buildtype}/netcoreapp*/publish/*/sosdocsunix.txt %{buildroot}%{toolsdir}
-# remove CoreCLR system DLLs
-rm -f %{buildroot}%{toolsdir}/System.Collections.Immutable.dll
-rm -f %{buildroot}%{toolsdir}/System.Reflection.Metadata.dll
-rm -f %{buildroot}%{toolsdir}/System.Runtime.CompilerServices.Unsafe.dll
+for so in `find %{buildroot}%{diagnosticsdir} -type f -name "*.so" -exec basename {} \;`; do
+  ln -sf %{diagnosticsdir}/${so} %{buildroot}%{diagnosticsdir}/%{rid}
+done
 
+# remove CoreCLR system DLLs
+rm -f %{buildroot}%{diagnosticsdir}/System.Collections.Immutable.dll
+rm -f %{buildroot}%{diagnosticsdir}/System.Reflection.Metadata.dll
+rm -f %{buildroot}%{diagnosticsdir}/System.Runtime.CompilerServices.Unsafe.dll
 
 %files
 %manifest %{name}.manifest
 %{diagnosticsdir}/*
-
-%files tools
-%manifest %{name}.manifest
-%defattr(644,owner,users,-)
-%dir %{toolsdir}
-%{toolsdir}/*
 
