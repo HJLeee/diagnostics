@@ -210,7 +210,7 @@ rm -f %{buildroot}%{diagnosticsdir}/System.Collections.Immutable.dll
 rm -f %{buildroot}%{diagnosticsdir}/System.Reflection.Metadata.dll
 rm -f %{buildroot}%{diagnosticsdir}/System.Runtime.CompilerServices.Unsafe.dll
 
-touch %{buildroot}%{diagnosticsdir}/version-%{version}
+touch %{buildroot}%{diagnosticsdir}/version-%{version}-%{release}
 
 %files
 %manifest %{name}.manifest
