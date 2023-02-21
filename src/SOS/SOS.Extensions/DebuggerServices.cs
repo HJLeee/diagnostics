@@ -31,10 +31,23 @@ namespace SOS
 
         private readonly HostType _hostType;
 
+        /// <summary>
+        /// A pointer to the underlying IDebugClient interface if the host is DbgEng.
+        /// </summary>
+        public IDebugClient5 DebugClient { get; }
+
         internal DebuggerServices(IntPtr punk, HostType hostType)
             : base(new RefCountedFreeLibrary(IntPtr.Zero), IID_IDebuggerServices, punk)
         {
             _hostType = hostType;
+
+            // This uses COM marshalling code, so we also check that the OSPlatform is Windows.
+            if (hostType == HostType.DbgEng && RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            {
+                object obj = Marshal.GetObjectForIUnknown(punk);
+                if (obj is IDebugClient5 client)
+                    DebugClient = client;
+            }
         }
 
         public HResult GetOperatingSystem(out DebuggerServices.OperatingSystem operatingSystem)
@@ -325,6 +338,30 @@ namespace SOS
                 return VTable.GetOffsetBySymbol(Self, moduleIndex, symbolPtr, out address);
             }
         }
+        
+        public HResult GetTypeId(int moduleIndex, string typeName, out ulong typeId)
+        {
+            if (string.IsNullOrEmpty(typeName)) throw new ArgumentException(nameof(typeName));
+
+            byte[] typeNameBytes = Encoding.ASCII.GetBytes(typeName + "\0");
+            fixed (byte* typeNamePtr = typeNameBytes)
+            {
+                return VTable.GetTypeId(Self, moduleIndex, typeNamePtr, out typeId);
+            }
+        }
+
+        public HResult GetFieldOffset(int moduleIndex, ulong typeId, string typeName, string fieldName, out uint offset)
+        {
+            if (string.IsNullOrEmpty(fieldName)) throw new ArgumentException(nameof(fieldName));
+
+            byte[] typeNameBytes = Encoding.ASCII.GetBytes(typeName + "\0");
+            byte[] fieldNameBytes = Encoding.ASCII.GetBytes(fieldName + "\0");
+            fixed (byte* typeNamePtr = typeNameBytes)
+            fixed (byte *fieldNamePtr = fieldNameBytes)
+            {
+                return VTable.GetFieldOffset(Self, moduleIndex, typeNamePtr, typeId, fieldNamePtr, out offset);
+            }
+        }
 
         public int GetOutputWidth() => (int)VTable.GetOutputWidth(Self);
 
@@ -387,6 +424,8 @@ namespace SOS
             public readonly delegate* unmanaged[Stdcall]<IntPtr, byte*, uint, out uint, int> GetSymbolPath;
             public readonly delegate* unmanaged[Stdcall]<IntPtr, int, ulong, byte*, int, out uint, out ulong, int> GetSymbolByOffset;
             public readonly delegate* unmanaged[Stdcall]<IntPtr, int, byte*, out ulong, int> GetOffsetBySymbol;
+            public readonly delegate* unmanaged[Stdcall]<IntPtr, int, byte*, out ulong, HResult> GetTypeId;
+            public readonly delegate* unmanaged[Stdcall]<IntPtr, int, byte*, ulong, byte*, out uint, HResult> GetFieldOffset;
             public readonly delegate* unmanaged[Stdcall]<IntPtr, uint> GetOutputWidth;
             public readonly delegate* unmanaged[Stdcall]<IntPtr, uint*, int> SupportsDml;
             public readonly delegate* unmanaged[Stdcall]<IntPtr, DEBUG_OUTPUT, byte*, void> OutputDmlString;
