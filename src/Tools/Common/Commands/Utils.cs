@@ -159,14 +159,28 @@ namespace Microsoft.Internal.Common.Utils
             }
         }
 
-        private static bool isSetCursorPositionSupported = true;
-        private void SystemConsoleLineRewriter() {
-            try {
-                if (isSetCursorPositionSupported)
-                    Console.SetCursorPosition(0, LineToClear);
-            } catch {
-                Console.WriteLine("Console.SetCursorPosition() is not supported in this env.");
-                isSetCursorPositionSupported = false;
+        private void SystemConsoleLineRewriter() => Console.SetCursorPosition(0, LineToClear);
+
+        private static bool? _isSetCursorPositionSupported;
+        public bool IsRewriteConsoleLineSupported
+        {
+            get {
+                bool isSupported = _isSetCursorPositionSupported ?? EnsureInitialized();
+                return isSupported;
+
+                bool EnsureInitialized()
+                {
+                    try {
+                        var left = Console.CursorLeft;
+                        var top = Console.CursorTop;
+                        Console.SetCursorPosition(0, LineToClear);
+                        Console.SetCursorPosition(left, top);
+                        _isSetCursorPositionSupported = true;
+                    } catch {
+                        _isSetCursorPositionSupported = false;
+                    }
+                    return (bool)_isSetCursorPositionSupported;
+                }
             }
         }
     }
