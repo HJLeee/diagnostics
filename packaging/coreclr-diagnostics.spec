@@ -173,7 +173,7 @@ export LD_LIBRARY_PATH=%{_builddir}/%{name}-%{version}/libicu-57.1
 
 # SOS
 mkdir -p %{buildroot}%{diagnosticsdir}/%{rid}
-cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/*.so %{buildroot}%{diagnosticsdir}
+cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/*.so %{buildroot}%{diagnosticsdir}/%{rid}
 cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Bcl.AsyncInterfaces.dll %{buildroot}%{diagnosticsdir}
 cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.DebugServices.dll %{buildroot}%{diagnosticsdir}
 cp %{_artifacts}/Linux.%{_barch}.%{_buildtype}/Microsoft.Diagnostics.DebugServices.Implementation.dll %{buildroot}%{diagnosticsdir}
@@ -201,8 +201,8 @@ cp -f %{_artifacts}/Linux.%{_barch}.%{_buildtype}/sosdocsunix.txt %{buildroot}%{
 for name in counters dump gcdump stack trace; do
   cp -f %{_artifacts}/dotnet-${name}/%{_buildtype}/netcoreapp*/publish/*.dll %{buildroot}%{diagnosticsdir}
 done
-for so in `find %{buildroot}%{diagnosticsdir} -type f -name "*.so" -exec basename {} \;`; do
-  ln -sf %{diagnosticsdir}/${so} %{buildroot}%{diagnosticsdir}/%{rid}
+for so in `find %{buildroot}%{diagnosticsdir}/%{rid} -type f -name "*.so" -exec basename {} \;`; do
+  ln -sf %{rid}/${so} %{buildroot}%{diagnosticsdir}
 done
 
 # remove CoreCLR system DLLs
