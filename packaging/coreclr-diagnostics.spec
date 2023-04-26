@@ -4,7 +4,7 @@
 
 Name:       coreclr-diagnostics
 Version:    6.0.328102
-Release:    0
+Release:    33
 Summary:    Microsoft .NET Core runtime diagnostic tools
 Group:      Development/Languages
 License:    MIT
